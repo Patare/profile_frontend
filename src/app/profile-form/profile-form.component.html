@@ -1,0 +1,69 @@
+<p>profile-form works!</p>
+<div class="card">
+    <h1>Registation</h1>
+<h1>{{msg}}</h1>
+
+<button (click)="getData()">getdata</button>
+<!-- <div *ngFor="let user of userList">
+  <p>{{ user.FirstName }} {{ user.LastName }}</p>
+  <p>Email: {{ user.EmailId }}</p>
+
+</div> -->
+
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>EmailId</th>
+    <th>password</th>
+    <th>confirmpassword</th>
+    <th>Action</th>
+
+  </tr>
+
+<tr *ngFor="let user of userList">
+<td>{{user.id}}</td>
+    <!-- <td>{{ user.name }}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.address}}</td>
+    <td>{{user.number}}</td> -->
+
+
+    <td>{{user.FirstName}}</td>
+    <td>{{user.LastName}}</td>
+    <td>{{user.EmailId}}</td>
+    <td>{{user.password}}</td>
+    <td>{{user.confirmpassword}}</td>
+    <td><button (click)="deleteProduct(user.id)">delete</button>
+    <a routerLink="/update/{{user.id}}"><button>Update</button></a>
+    </td>
+    
+
+</tr>
+</table>
+    <!-- <button type="submit" (click)="getMassage()" >Submit</button> -->
+
+<form>
+<!-- <div class="form-group">
+  <label>Name</label>
+  <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"  class="form-control" id="name" placeholder="Enter Name">
+
+</div>
+
+<div class="form-group">
+    <label>address</label>
+    <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}"  class="form-control" id="address" placeholder="Enter address">
+
+  </div>
+
+  <div class="form-group">
+    <label>Phone</label>
+    <input type="text" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}" class="form-control" id="phone" placeholder="Enter Mobile">
+
+  </div> -->
+
+<!-- <button type="submit" class="btn btn-primary mt-4" (click)="register()" >Submit</button> -->
+</form>
+</div>
+<div>

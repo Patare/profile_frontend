@@ -1,0 +1,50 @@
+button {
+    /* Add your custom styles here */
+    padding: 10px 20px;
+margin-top: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .hide {
+    display: none;
+    color: red;
+  }
+  /* .myDIV input{
+    width: 10%;
+position: absolute;
+top: 90px;
+left: -4px;
+
+  } */
+  .float-left{
+    float: left;
+  }
+
+  .horizontal-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .image-container {
+    margin-right: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tag-input {
+    width: 50%; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Clearfix to clear floating elements */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .gallary_grid{
+    width: 99%;
+  }

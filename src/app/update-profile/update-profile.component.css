@@ -1,0 +1,100 @@
+  
+   .submit {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    max-width: fit-content !important;
+  }
+  .cancle {
+    border: rgb(244 142 43);
+    background-color: rgb(244 142 43);
+    color: white;
+  }
+ 
+  
+
+  @media only screen and (min-width: 100px) {
+    .inputRow {
+      margin-top: 24pt;
+    }
+  }
+
+  @media only screen and (min-width: 100px) {
+    :host ::ng-deep .mat-tab-labels {
+      flex-direction: column;
+      max-width: 208px;
+    }
+    mat-tab-group {
+      flex-grow: 1;
+      display: flex;
+      flex-direction:column;
+      height: 100%;
+    }
+    .nextbtn,
+    .resetbtn {
+      height: 48px;
+    }
+  }
+  
+  .bgWhite {
+    background: #eeeded;
+    height: 100%;
+    margin-left: auto ;
+    padding-left: 100px;
+    margin-right: 0px;
+    padding-bottom: 15px;
+  }
+    
+  .headerreservation {
+    background-color:#273C4D;
+    font-size: 26pt;
+    color: #fdfcfc;
+    text-align: center;
+    width: 150%;
+  }
+
+  
+img {
+  border: 5px solid #eeeded;
+}
+
+
+.close{
+  position: absolute;
+  cursor: pointer;
+  top: -5px;
+  right: 30px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  height: auto;
+  text-align: center;
+}
+
+
+.hide {
+  display: none;
+  color: red;
+}
+    
+.myDIV:hover + .hide {
+  /* display: block; */
+  width: 245px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+ }
+ .pagewidh{
+  width: 99%;
+
+ }
+ .update_button{
+position: relative;
+margin-left: 400px;
+ }

@@ -1,0 +1,240 @@
+<div class="pagewidh">
+  <div class="row px-4">
+    <div class="headerreservation mb-2">
+      Update Profile Form
+      <button type="submit" class="close" routerLink="home">
+        <span>&times;</span>
+      </button>
+    </div>
+  </div>
+
+  <form [formGroup]="updateForm" (ngSubmit)="updateData()">
+  
+
+    
+    <div class="buttons" *ngFor="let item of getAll_data">
+      <div class="row no-gutters bgWhite">
+        <div class="col-md-11 col-12 d-flex flex-column">
+          <div class="col-12 mt-4 mt-lg-0">
+            <div class="row inputRow">
+              <div class="col-4 col-lg-2 my-auto">
+                <label for="exampleSelect1" class="form-label"
+                  >Politician Name</label
+                >
+              </div>
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="PoliticianName"
+                />
+              </div>
+
+              <div class="col-4 col-lg-2 my-auto">
+                <label for="ShidtSelect" class="form-label"
+                  >Political Party Name</label
+                >
+              </div>
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="PoliticalPartyName"
+                />
+              </div>
+            </div>
+
+            <div class="row inputRow">
+              <div class="col-4 col-lg-2 my-auto">
+                <label for="exampleSelect1" class="form-label"
+                  >Phone Number</label
+                >
+              </div>
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="PhoneNumber"
+                />
+              </div>
+
+              <div class="col-4 col-lg-2 my-auto">
+                <label for="ShidtSelect" claxss="form-label"
+                  >WhatsApp Phone Number</label
+                >
+              </div>
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input
+                  type="text"
+                  class="form-control"
+                    formControlName="whatsappno"
+                />
+              </div>
+            </div>
+
+            <div class="row inputRow">
+              <div class="col-4 col-lg-2 my-auto">
+                <label for="exampleSelect1" class="form-label">Email ID</label>
+              </div>
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input
+                  type="text"
+                  class="form-control"
+                    formControlName="MailId"
+                />
+              </div>
+
+              <div class="col-4 col-lg-2 my-auto">
+                <label for="ShidtSelect" class="form-label"
+                  >Party Office Location</label
+                >
+              </div>
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="item.Partyofficelocation"
+                    formControlName="Partyofficelocation"
+                />
+              </div>
+            </div>
+
+            <div class="row inputRow">
+              <div class="col-4 col-lg-2 my-auto">
+                <label for="exampleSelect1" class="form-label"
+                  >Instagram ID</label
+                >
+              </div>
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input
+                  type="text"
+                  class="form-control"
+                    formControlName="InstagramId"
+                />
+              </div>
+
+              <div class="col-4 col-lg-2 my-auto">
+                <label for="exampleSelect1" class="form-label"
+                  >Facebook ID</label
+                >
+              </div>
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input
+                  type="text"
+                  class="form-control"
+                    formControlName="FecebookId"
+                />
+              </div>
+            </div>
+
+            <div class="row inputRow">
+              <div class="col-4 col-lg-2 my-auto">
+                <label for="exampleSelect1" class="form-label"
+                  >Twitter ID</label
+                >
+              </div>
+
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input
+                  type="text"
+                  class="form-control"
+                    formControlName="TwitterId"
+                />
+              </div>
+
+              <div class="col-4 col-lg-2 my-auto">
+                <label for="confirmed">You Tube Link</label>
+              </div>
+
+              <div class="col-8 col-lg-4 mb-4 mb-lg-0">
+                <input
+                  type="text"
+                  class="form-control"
+                    formControlName="YouTubeLink"
+                />
+              </div>
+            </div>
+
+            <div class="row inputRow">
+              <div class="col-4 col-lg-2 my-auto">
+                <label>Politician's Information</label>
+              </div>
+
+              <div class="col-8 col-lg-10 mb-9 mb-lg-0">
+                <input
+                  type="text"
+                  class="form-control"
+                    formControlName="PoliticiansInformation"
+                />
+              </div>
+            </div>
+
+            <div class="row inputRow">
+              <div class="col-4 col-lg-2 my-auto">
+                <label>Politician Photo</label>
+              </div>
+
+              <div
+                class="col-8 col-lg-4 mb-4 mb-lg-0"
+                *ngIf="getAll_data.length > 0"
+              >
+                <div *ngFor="let item of getAll_data[0].PoliticanPhoto">
+                  <img height="180px" width="180px" [src]="getImageUrl(item)" />
+                  <input
+                    type="file"
+                    class="form-control"
+                    (change)="profilePhoto($event)"
+                    accept="image/png, image/gif, image/jpeg"
+                    formControlName="PoliticanPhoto"
+                  />
+                </div>
+              </div>
+
+              <div class="col-4 col-lg-2 my-auto">
+                <label>Political Party logo </label>
+              </div>
+
+              <div
+                class="col-8 col-lg-4 mb-4 mb-lg-0"
+                *ngIf="getAll_data.length > 0"
+              >
+                <div *ngFor="let item of getAll_data[0].PoliticalPartylogo">
+                  <img height="180px" width="180px" [src]="getImageUrl(item)" />
+                  <input
+                    type="file"
+                    class="form-control"
+                    (change)="Logo($event)"
+                    accept="image/png, image/gif, image/jpeg"
+                    formControlName="PoliticalPartylogo"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row inputRow">
+              <div class="col-4 col-lg-5 mb-8 mb-lg-0 pl-md-0 py-0"></div>
+
+              <div
+                class="col-2 col-lg-1 mb-4 mb-lg-0 pl-md-0 py-0"
+                routerLink="home"
+              >
+                <button class="btn btn-success submitbt rounded" (click)="updateData()">Update</button>
+              </div>
+
+              <div
+                class="col-2 col-lg-1 mb-4 mb-lg-0 pl-md-0 py-0"
+                routerLink="home"
+              >
+                <button class="btn btn-light cancle rounded">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- <router-outlet></router-outlet> -->
+<app-image [data]="photo_gallary_images" [gallary_name]="PhotoGallaryName" [User_data1]="getAll_data"></app-image>
+<app-image [data]="news_gallary_images" [gallary_name]="NewsGallaryName"  [User_data1]="getAll_data"></app-image>
+

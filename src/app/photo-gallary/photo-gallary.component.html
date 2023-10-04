@@ -1,0 +1,37 @@
+
+  <div *ngFor="let item of userlist">
+    <!-- <td>{{ item._id }}</td> -->
+    <p><span class="font-weight-bold ">Politician Name :</span>   {{ item.PoliticianName }}</p>
+    <p><span class="font-weight-bold ">Political Party Name :</span>   {{ item.PoliticalPartyName }}</p>
+    <p><span class="font-weight-bold ">Phone Number :</span>   {{ item.PhoneNumber }}</p>
+    <p><span class="font-weight-bold ">WhatsApp Phone Number :</span>  {{ item.whatsappno }}</p>
+    <p><span class="font-weight-bold ">Email ID :</span>   {{ item.MailId }}</p>
+    <p><span class="font-weight-bold ">Party Office Location :</span>  {{ item.Partyofficelocation }}</p>
+    <p><span class="font-weight-bold ">Instagram ID :</span>   {{ item.insta }}</p>
+    <p><span class="font-weight-bold ">Facebook ID :</span>   {{ item.FecebookId }}</p>
+    <p><span class="font-weight-bold ">Twitter ID :</span>   {{ item.TwitterId }}</p>
+    <p><span class="font-weight-bold ">You Tube Link :</span>  {{ item.YouTubeLink }}</p>
+    <p><span class="font-weight-bold ">Information :</span>   {{ item.info }}</p>
+   
+  </div>
+  <div *ngIf="userlist.length > 0">
+  <div *ngFor="let item of userlist[0].PoliticanPhoto">
+    <img [src]="getImageUrl(item)" width="180" class="uk-margin-large-left uk-margin-medium-top" />
+    <h4>{{item.filename}}</h4>
+  </div>
+  <div *ngIf="userlist.length > 0">
+    <div *ngFor="let item of userlist[0].PoliticalPartylogo">
+      <img [src]="getImageUrl(item)" width="180" class="uk-margin-large-left uk-margin-medium-top" />
+      <h4>{{item.filename}}</h4>
+    </div>
+ 
+  <!-- <div *ngIf="userlist.length > 0">
+    <div *ngFor="let user of userlist">
+      <div *ngFor="let image of user.PhotoGallery">
+        <img [src]="getImagesUrl('PhotoGallery', image.filename)" alt="{{ image.description }}">
+      </div>
+    </div>
+  </div> -->
+  
+  
+</div>

@@ -1,0 +1,66 @@
+{
+  "profileId": [
+    {
+      "FirstName": "Kalyan",
+      "LastName": "Patare",
+      "EmailId": "kalyan@gmail.com",
+      "password": "12456",
+      "confirmpassword": "56565",
+      "id": 1
+    },
+    {
+      "pname": "Parchi somvanshi",
+      "partyname": "BJP",
+      "email": "parchi@gamil.com",
+      "phoneno": "9850363210",
+      "whatsappno": "9527258811",
+      "officeloction": "Ashoka Nagar, Kharadi, Pune, Maharashtra 411014",
+      "youtube": "https://youtube.com/@soothingdews911",
+      "insta": "https://www.instagram.com/accounts/login/",
+      "facebook": "https://m.facebook.com/login/?refsrc=deprecated",
+      "twitterId": "https://twitter.com/i/flow/login",
+      "info": "PoliticiansInformation: Politicians propose, support and create laws or policies that govern the land and, by extension, its people. The word politician is sometimes replaced with the euphemism statesman. Basically, a \"politician\" can be anyone who seeks to achieve political power in any bureaucratic institution",
+      "photo": "assets/image/templet1/customer/profile/profileImage.jpg",
+      "logo": "assets/image/templet1/customer/logo/2.jpg",
+      "id": 2
+    },
+    {
+      "pname": "Ashitosh",
+      "partyname": "BJP",
+      "email": "ashitosh@gmail.com",
+      "phoneno": "7028145510",
+      "whatsappno": "702814510",
+      "officeloction": "Pune",
+      "youtube": "youTube.com",
+      "insta": "Ashu",
+      "facebook": "Ashu",
+      "twitterId": "ashu",
+      "info": "Politicians propose, support and create laws or policies that govern the land an",
+      "photo": "C:\\fakepath\\react_native cer.jpg",
+      "logo": "C:\\fakepath\\WhatsApp Image 2023-08-07 at 3.58.09 PM.jpeg",
+      "id": 3
+    },
+    {
+      "pname": "",
+      "partyname": "",
+      "email": "",
+      "phoneno": "",
+      "whatsappno": "",
+      "officeloction": " ",
+      "youtube": "",
+      "insta": "",
+      "facebook": "",
+      "twitterId": "",
+      "info": "",
+      "photo": "",
+      "logo": "",
+      "files": null,
+      "id": 4
+    }
+ 
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

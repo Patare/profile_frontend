@@ -1,0 +1,40 @@
+<div class="gallary_grid">
+  <form [formGroup]="image_Form" (ngSubmit)="submit_gallary(image_Form.value)">
+    <div class="row inputRow bgWhite mt-0 mb-0">
+      <div class="col-4 col-lg-2 my-auto">
+        <label>{{gallary_name}} </label>
+        <button class="btn btn-success ml-5" (click)="togglebut()">
+          {{ display ? "-" : "+" }}
+        </button>
+      </div>
+      <div class="col-8 col-lg-10 mb-9 mb-lg-0" *ngIf="display">
+        <div class="myDIV horizontal-images">
+          <div *ngFor="let multiple1 of data;  let i = index" class="image-container">
+            <img height="90px" width="90px" id="selectimg" [src]="multiple1.filename" action="button"
+              (click)="onclickimg(multiple1,User_data1, gallary_name)" />
+            <input type="text" class="tag-input" formControlName="descriptions" placeholder="Enter name" />
+          </div>
+          <div *ngFor="let multiple1 of photoGallery_array; let i = index" class="image-container">
+            <img height="90px" width="90px" id="selectimg" [src]="multiple1" action="button"
+              (click)="onclickimg(multiple1,User_data1,gallary_name)" />
+            <input type="text" class="tag-input" formControlName="descriptions" placeholder="Enter name" />
+          </div>
+          <div class="clearfix">
+            <button class="btn btn-primary mt-5 inline-block" (click)="fileInput1.click()">
+              +
+            </button>
+          </div>
+        </div>
+        <div class="hide">For Delete Image click on Image.</div>
+        <input #fileInput1 type="file" style="display: none" class="form-control w-75" multiple="multiple"
+          (change)="photosGallery($event)" accept="image/png, image/gif, image/jpeg" />
+        <div class="col-2 col-lg-1 mb-4 mb-lg-0 pl-md-0 py-0 update_button">
+          <button class="btn btn-success submitbt rounded mt-3" (click)="upload_photosGallery()">Upload</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+ 
+</div>
+<!-- <h1 *ngFor="let item of data">Data in Child: {{ item.filename }}</h1> -->
